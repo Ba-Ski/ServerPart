@@ -1,0 +1,170 @@
+.kiwi:hover {
+    fill: #ace63c;
+    fill-opacity: .3;
+}
+
+.kiwi {
+    fill-opacity: 0;
+}
+
+.svg_container {
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url(Background3.png) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.gear {
+    transform-origin: center center;
+    animation: rotate 10s linear infinite;
+}
+
+.homeImage {
+    z-index: 2;
+}
+
+.gearImage {
+    width: 20%;
+    height: auto;
+    position: absolute;
+    z-index: 1;
+}
+
+@keyframes rotate {
+    50% {
+        transform: rotate(180deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+@media screen  and (max-width:1200px) {
+
+}
+
+.headerMenu{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+}
+header {
+    background: repeating-linear-gradient(-45deg, #76d32d 20px, #f8f4eb 20px, #cdf7ad 80px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .2);
+}
+
+nav {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.logo-box {
+    float: left;
+    margin-left: 25px;
+}
+
+.logo {
+    margin: 0;
+    height: 70px;
+    text-align: center;
+}
+
+ul {
+    margin: 0;
+    margin-right: 25px;
+    padding-left: 0;
+    list-style: none;
+    float: right;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+
+li a {
+    color: #868686;
+    text-transform: uppercase;
+}
+
+li {
+    display: inline-block;
+    margin-left: 25px;
+    transition: .5s linear;
+}
+
+li a:after {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    background: #868686;
+    transition: all 0.5s linear;
+}
+
+li a:hover:after {
+    width: 100%;
+}
+
+@media screen and (max-width: 574px) {
+    .logo-box {
+        float: none;
+        margin: 0 auto;
+    }
+
+    ul {
+        float: none;
+        margin: 0 25px;
+    }
+
+    li:first-of-type {
+        margin-left: 0
+    }
+}
+
+@media screen and (max-width: 493px) {
+    nav {
+        overflow: visible
+    }
+
+    ul {
+        height: auto;
+        margin: 25px 25px 0 25px;
+        line-height: 50px;
+    }
+
+    li {
+        display: block;
+        margin: 0;
+    }
+
+    li:hover {
+        background: rgba(0, 0, 0, .1)
+    }
+
+    li a:after {
+        content: none;
+    }
+}

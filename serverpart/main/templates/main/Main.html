@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <?xml version="1.0" encoding="utf-8"?>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/CSS.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/modal.css' %}">
+    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+</head>
+<body>
+<div class="headerMenu">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <header>
+        <nav>
+            <div class="logo-box">
+                <h1 class="logo">
+                    <a href="/">
+                        <img src="{% static 'main/phoenix.png' %}">
+                    </a>
+                </h1>
+            </div>
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">work</a></li>
+                <li><a href="#">product</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+<div class="svg_container">
+    <svg class="homeImage" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+         viewBox="0 0 1600 1400" preserveAspectRatio="xMidYMid meet">
+        <g>
+            <image style="overflow:scroll;" width="1600" height="988" xlink:href="{% static 'main/trasert.png' %}" >
+            </image>
+        </g>
+        <g>
+            <path class="kiwi" id="visitRoomFloor" onclick="javascript:Modal()"  d="M860,555.5c-10.9,12-19.4,34.9-7,50c11.1,13.5,33.4,13.6,46.5,5c22.7-14.9,21.2-57.6,3.5-68
+		        C890.7,535.3,870.8,543.6,860,555.5z"/>
+        </g>
+    </svg>
+    <svg class="gearImage" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+         viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+        <g>
+            <image class="gear" style="overflow:visible;opacity:0.5;" width="300" height="300"
+                   xlink:href="Steam.png" x="0px" y="0px">
+            </image>
+        </g>
+    </svg>
+</div>
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">×</span>
+            <h2>Modal Header</h2>
+        </div>
+        <div class="modal-body">
+            <p>Some text in the Modal Body</p>
+            <p>Some other text...</p>
+        </div>
+        <div class="modal-footer">
+            <h3>Modal Footer</h3>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript" src="{% static 'main/script.js' %}"></script>
+</body>
+</html>
